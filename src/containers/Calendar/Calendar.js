@@ -39,7 +39,7 @@ export function Calendar() {
         );
     };
 
-    const groupEventsByWeek = (range) => {
+    const groupEventsByWeek = () => {
         if (range === 30) {
             let eventsMap = events.map((e) => ({
                 key: getWeek(comparableDate(e)),
@@ -97,7 +97,7 @@ export function Calendar() {
     };
 
     useEffect(() => {
-        groupEventsByWeek(range);
+        groupEventsByWeek();
     }, [range, events]);
 
     useEffect(() => {
@@ -114,8 +114,10 @@ export function Calendar() {
                     getEvents().then((res) => {
                         if (res.status === 200) {
                             preProcessEvents(res.result.items);
-                            setLoading(false);
-                        } else alert("Error while fetching events");
+                        } else {
+                            alert("Error while fetching events");
+                        } 
+                        setLoading(false);
                     })
                 );
         });
