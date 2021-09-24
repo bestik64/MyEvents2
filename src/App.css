@@ -55,8 +55,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 55%;
-    margin-left: 45%;
+    width: 53%;
+    margin-left: 45.5%;
 }
 
 .home-header {
@@ -170,4 +170,8 @@
     padding-right: 3px;
     padding-top: 3px;
     display: none;
+}
+
+p {
+    text-align: center;
 }
