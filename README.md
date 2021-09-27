@@ -1,7 +1,7 @@
 Before first running of the application:
 
 - locate yourself in project directory and run "npm install" to install node modules
-- set your Google Calendar to "public"
+- set your Google Calendar to "public" and choose "see all event details"
 - run with "npm start"
 
 Note:
